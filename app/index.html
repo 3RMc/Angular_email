@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+        <script data-require="angular.js@1.6.7" data-semver="1.4.8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+        <script data-require="lodash.js@*" data-semver="3.10.0" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.js"></script>
+        <script data-require="moment.js@*" data-semver="2.10.2" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.0.3.js"></script>
+        <link rel="stylesheet" href="main.css.css" />
+        <script src="script.js"></script>
+        <title>Email-Interface</title>
+    </head>
+    <body>
+        <div class="logo label label-success">Почтовый интерфейс от 3RMc <i class="glyphicon glyphicon-envelope"></i></div>
+        <div class="content">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Поиск:">
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-mail table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <td class="cell cell-favourite"></td>
+                        <td class="cell cell-sender"></td>
+                        <td class="cell cell-body"></td>
+                        <td class="cell cell-date"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell cell-favourite">
+                            <button>
+                                <i class="glyphicon glyphicon-star"></i>
+                            </button>
+                        </td>
+                        <td class="cell cell-sender">
+                            <button class="btn btn-default person">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span class="text"></span>
+                            </button>
+                        </td>
+                        <td class="cell cell-body">
+                            <span class="text"></span>
+                        </td>
+                        <td class="cell cell-date">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
