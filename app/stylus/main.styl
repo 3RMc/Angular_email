@@ -1,2 +1,49 @@
-body
-  background-color yellow
+limited-cell(width = 200px)
+  max-width width
+  position relative
+  overflow hidden
+  white-space nowrap
+  display inline-block
+  text-overflow ellipsis
+
+.logo
+  margin-bottom 10px
+  display block
+
+.cell
+  vertical-align middle
+  &-favourite
+    width 50px
+    text-align center
+    .btn
+      display inline-block
+      vertical-align middle
+      padding 3px 6px
+      i
+        color #ccc;
+    .btn-warning
+      i
+        color #fff
+  &-number
+    text-align center
+  &-sender
+    white-space nowrap
+    .btn
+      display inline-block
+      vertical-align middle
+      margin-right 10px
+      padding 3px 6px
+    .text
+      limited-cell()
+      display inline-block
+      vertical-align middle
+  &-body
+    .text
+      limited-cell(400px)
+
+.t-row
+  cursor pointer
+
+.content
+  max-width 800px
+  margin 0 auto

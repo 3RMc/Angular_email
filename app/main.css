@@ -1,3 +1,59 @@
-body {
-  background-color: #ff0;
+.logo {
+  margin-bottom: 10px;
+  display: block;
+}
+.cell {
+  vertical-align: middle;
+}
+.cell-favourite {
+  width: 50px;
+  text-align: center;
+}
+.cell-favourite .btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 3px 6px;
+}
+.cell-favourite .btn i {
+  color: #ccc;
+}
+.cell-favourite .btn-warning i {
+  color: #fff;
+}
+.cell-number {
+  text-align: center;
+}
+.cell-sender {
+  white-space: nowrap;
+}
+.cell-sender .btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 3px 6px;
+}
+.cell-sender .text {
+  max-width: 200px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
+.cell-body .text {
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+.t-row {
+  cursor: pointer;
+}
+.content {
+  max-width: 800px;
+  margin: 0 auto;
 }
