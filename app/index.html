@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="email">
     <head>
         <meta charset="UTF-8">
         <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
@@ -11,7 +11,7 @@
         <script src="script.js"></script>
         <title>Email-Interface</title>
     </head>
-    <body>
+    <body ng-controller="MessagesListCtrl as messageList">
         <div class="logo label label-success">Почтовый интерфейс от 3RMc <i class="glyphicon glyphicon-envelope"></i></div>
         <div class="content">
             <div class="panel panel-default">
@@ -35,7 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr ng-repeat="message in messageList.messages">
                         <td class="cell cell-favourite">
                             <button>
                                 <i class="glyphicon glyphicon-star"></i>
@@ -44,14 +44,14 @@
                         <td class="cell cell-sender">
                             <button class="btn btn-default person">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span class="text"></span>
+                                <span class="text">{{message.email}}</span>
                             </button>
                         </td>
                         <td class="cell cell-body">
-                            <span class="text"></span>
+                            <span class="text">{{message.body}}</span>
                         </td>
                         <td class="cell cell-date">
-                            <span></span>
+                            <span>{{message.date}}</span>
                         </td>
                     </tr>
                 </tbody>
