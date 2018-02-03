@@ -37,7 +37,7 @@
                 <tbody>
                     <tr ng-repeat="message in messageList.messages | orderBy: 'date' : true ">
                         <td class="cell cell-favourite">
-                            <button>
+                            <button ng-click="messageList.addToFavourite(message.id)" ng-class="['btn', 'btn-default', {'btn-warning': message.favourite}]">
                                 <i class="glyphicon glyphicon-star"></i>
                             </button>
                         </td>
