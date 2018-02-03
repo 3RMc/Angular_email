@@ -1,7 +1,8 @@
+<meta charset="UTF-8">
 <div class="modal-window">
     <div class="modal-window-overlay" ng-click="messageList.modalHide()"></div>
     <div class="modal-window-in">
-        <div class="close" ng-click="messageList.modalHide()"></div>
+        <div class="close" ng-click="messageList.modalHide()">x</div>
         <p class="email"><b>Email:</b> {{messageList.messages[messageList.modalId].email}}</p>
         <p class="name"><b>Имя:</b> {{messageList.messages[messageList.modalId].name}}</p>
         <p class="body-desc">Сообщение:<b></b></p>
