@@ -19,6 +19,7 @@ gulp.task('browsersync', function() {
 gulp.task('watch', ['browsersync', 'stylus'], function() {
     gulp.watch('app/stylus/*.styl', ['stylus']);
     gulp.watch('app/*.html', browsersync.reload);
+    gulp.watch('app/*.css', browsersync.reload);
     gulp.watch('app/*.js', browsersync.reload);
 });
 
