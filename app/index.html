@@ -42,10 +42,10 @@
                             </button>
                         </td>
                         <td class="cell cell-sender">
-                            <button class="btn btn-default person">
+                            <button class="btn btn-default person" uib-popover="Имя: {{message.name}}" popover-title="E-mail: {{message.email}}" popover-placement="auto top" popover-trigger="mouseenter">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span class="text">{{message.email}}</span>
                             </button>
+                            <span class="text">{{message.email}}</span>
                         </td>
                         <td class="cell cell-body">
                             <span class="text">{{message.body}}</span>
