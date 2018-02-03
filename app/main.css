@@ -1,6 +1,10 @@
+.panel {
+  width: 890px;
+}
 .logo {
   margin-bottom: 10px;
   display: block;
+  width: 100%;
 }
 .cell {
   vertical-align: middle;
