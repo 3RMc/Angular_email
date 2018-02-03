@@ -5,4 +5,8 @@ app.controller('MessagesListCtrl', function ($http) {
         .then(function (res) {
             vm.messages = res.data;
         });
+    vm.addToFavourite = function (messageId) {
+        var currentIndex = _.findIndex(vm.messages, { 'id': messageId });
+        vm.messages[currentIndex].favourite = (vm.messages[currentIndex].favourite === true) & false : true;
+    };
 })
