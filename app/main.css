@@ -61,3 +61,42 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.modal-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  text-align: center;
+}
+.modal-window:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.modal-window-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+}
+.modal-window-in {
+  vertical-align: middle;
+  display: inline-block;
+  width: 80%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  position: relative;
+  z-index: 99999;
+}
+.modal-window .body-desc {
+  margin-bottom: 0;
+}
