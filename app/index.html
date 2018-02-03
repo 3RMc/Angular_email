@@ -12,6 +12,7 @@
         <title>Email-Interface</title>
     </head>
     <body ng-controller="MessagesListCtrl as messageList">
+        <modal-window ng-show="messageList.modalId"></modal-window>
         <div class="logo label label-success">Почтовый интерфейс от 3RMc <i class="glyphicon glyphicon-envelope"></i></div>
         <div class="content">
             <div class="panel panel-default">
@@ -24,7 +25,6 @@
                     </div>
                 </div>
             </div>
-
             <table class="table table-mail table-striped table-bordered">
                 <thead>
                     <tr>
@@ -35,9 +35,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="message in messageList.messages | orderBy: 'date' : true " ng-class="['t-row', {warning: message.favourite}]">
+                    <tr ng-repeat="message in messageList.messages | orderBy: 'date' : true " ng-class="['t-row', {warning: message.favourite}]" ng-click="messageList.openFull(message.id)">
                         <td class="cell cell-favourite">
-                            <button ng-click="messageList.addToFavourite(message.id)" ng-class="['btn', 'btn-default', {'btn-warning': message.favourite}]">
+                            <button ng-click="messageList.addToFavourite(message.id); $event.stopPropagation();" ng-class="['btn', 'btn-default', {'btn-warning': message.favourite}]">
                                 <i class="glyphicon glyphicon-star"></i>
                             </button>
                         </td>
@@ -51,7 +51,7 @@
                             <span class="text">{{message.body}}</span>
                         </td>
                         <td class="cell cell-date">
-                            <span>{{message.date | date : 'dd.MM.yy'}}</span>
+                            <span uib-popover="{{message.date | date : 'medium'}}" popover-placement="auto top" popover-trigger="mouseenter">{{message.date | date : 'dd.MM.yy'}}</span>
                         </td>
                     </tr>
                 </tbody>
